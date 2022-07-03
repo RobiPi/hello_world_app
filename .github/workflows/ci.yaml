@@ -12,6 +12,8 @@ jobs:
                         uses: actions/setup-python@v3
                         -name: Install deps
                         run: pip3 install -r requirements.txt
+                        -name: Install test deps
+                        run: pip3 install -r test_requirements.txt
                         -name: Run tests
                         run: PYTHONPATH=. py.test --verbose -s
 
